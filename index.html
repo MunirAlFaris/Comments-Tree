@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments Trees</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <p data-stat="true" id="test"></p>
+  <header><h1>Comments Trees</h1></header>
+  <main>
+    <div class="posts-container">
+      <div class="post" data-postnum="one">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempore unde minima ullam beatae maxime adipisci id
+        distinctio inventore libero?</p>
+      </div>
+      <div class="post" data-postnum="second">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, unde.</p>
+      </div>
+      <div class="post" data-postnum="third">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="post" data-postnum="fourth">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+    <div class="comments">
+      <ul class="tree one" data-status="false">
+        <li>
+          <details>
+            <summary>First tree</summary>
+            <ul>
+              <li>First Replay</li>
+              <li>
+                <details>
+                  <summary>Second Replay</summary>
+                  <ul>
+                    <li>First Replay</li>
+                    <li>Second Replay</li>
+                    <li>
+                      <details>
+                        <summary>Another Replay</summary>
+                        <ul>
+                          <li>First Replay</li>
+                          <li>Second Replay</li>
+                          <li>Another Replay</li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>Another Replay</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Second Comment</summary>
+            <ul>
+              <li>First Replay</li>
+              <li>
+                <details>
+                  <summary>Second Replay</summary>
+                  <ul>
+                    <li>First Replay</li>
+                    <li>Second Replay</li>
+                    <li>Another Replay</li>
+                  </ul>
+                </details>
+              </li>
+              <li>Another Replay</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+      <ul class="tree second" data-status="false">
+        <li>
+          <details>
+            <summary>second Comment</summary>
+            <ul>
+              <li>First Replay</li>
+              <li>
+                <details>
+                  <summary>Second Replay</summary>
+                  <ul>
+                    <li>First Replay</li>
+                    <li>Second Replay</li>
+                    <li>
+                      <details>
+                        <summary>Another Replay</summary>
+                        <ul>
+                          <li>First Replay</li>
+                          <li>Second Replay</li>
+                          <li>Another Replay</li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Another Replay</summary>
+                  <ul>
+                    <li>First Replay</li>
+                    <li>Second Replay</li>
+                    <li>Another Replay</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Second Comment</summary>
+            <ul>
+              <li>First Replay</li>
+              <li>
+                <details>
+                  <summary>Second Replay</summary>
+                  <ul>
+                    <li>First Replay</li>
+                    <li>Second Replay</li>
+                    <li>Another Replay</li>
+                  </ul>
+                </details>
+              </li>
+              <li>Another Replay</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+      <ul class="tree third" data-status="false">
+        <li>
+          <details>
+            <summary>third Comment</summary>
+            <ul>
+              <li>First Replay</li>
+              <li>
+                <details>
+                  <summary>Second Replay</summary>
+                  <ul>
+                    <li>First Replay</li>
+                    <li>Second Replay</li>
+                    <li>
+                      <details>
+                        <summary>Another Replay</summary>
+                        <ul>
+                          <li>First Replay</li>
+                          <li>Second Replay</li>
+                          <li>Another Replay</li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>Another Replay</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Second Comment</summary>
+            <ul>
+              <li>First Replay</li>
+              <li>
+                <details>
+                  <summary>Second Replay</summary>
+                  <ul>
+                    <li>First Replay</li>
+                    <li>Second Replay</li>
+                    <li>Another Replay</li>
+                  </ul>
+                </details>
+              </li>
+              <li>Another Replay</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+      <ul class="tree fourth" data-status="false">
+        <li>
+          <details>
+            <summary>fourth Comment</summary>
+            <ul>
+              <li>First Replay</li>
+              <li>
+                <details>
+                  <summary>Second Replay</summary>
+                  <ul>
+                    <li>First Replay</li>
+                    <li>Second Replay</li>
+                    <li>
+                      <details>
+                        <summary>Another Replay</summary>
+                        <ul>
+                          <li>First Replay</li>
+                          <li>Second Replay</li>
+                          <li>Another Replay</li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>Another Replay</li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Second Comment</summary>
+            <ul>
+              <li>First Replay</li>
+              <li>
+                <details>
+                  <summary>Second Replay</summary>
+                  <ul>
+                    <li>First Replay</li>
+                    <li>Second Replay</li>
+                    <li>Another Replay</li>
+                  </ul>
+                </details>
+              </li>
+              <li>Another Replay</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer><p>Lorem ipsum dolor sit amet.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

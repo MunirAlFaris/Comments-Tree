@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #999;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header {
+  text-align: center;
+  padding: 20px 0;
+  color: #eee;
+}
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.tree {
+  display: none;
+}
+ul {
+  padding-left: 20px;
+  list-style: none;
+  line-height: 2em;
+}
+ul summary {
+  cursor: pointer;
+}
+ul summary {
+  outline: none;
+  list-style: none;
+}
+
+ul summary::-webkit-details-marker {
+  display: none;
+}
+
+ul li {
+  position: relative;
+  font-size: 18px;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  border-left: 2px solid gray;
+  border-bottom: 2px solid gray;
+  width: 8px;
+  height: 1em;
+}
+ul li::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  border-left: 2px solid gray;
+  width: 8px;
+  height: 100%;
+}
+
+ul li:last-child::after {
+  display: none;
+}
+ul.tree > li::after,ul.tree > li::before {
+  display: none;
+}
+ul summary::before {
+  content: "+";
+  position: absolute;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: -1.45em;
+  top: 0.5em;
+  z-index: 999;
+  text-align: center;
+}
+ul details[open] > summary::before {
+  content: "-";
+  line-height: 1.8em;
+}
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: 20px;
+  color: black;
+}
+.posts-container .post {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  outline: 4px solid black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+.posts-container .post::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  border-radius: 7.4px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border: 3px solid black;
+  outline: 4px solid #999;
+  transition: 0.3s ease;
+}
+.posts-container .post.active {
+  background-color: lightgreen;
+  color: white;
+}
+.posts-container .post.active::before {
+  outline-color: hsla(123, 59%, 38%, 0.466);
+}
+.posts-container .post p {
+  font-size: 18px;
+  text-align: center;
+  padding: 10px 5px;
+}
+.comments {
+  background-color: #eee;
+  align-self: flex-start;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 20px;
+  width: 100%;
+  outline: 4px solid black;
+  position: relative;
+}
+.comments::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  border-radius: 7.4px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border: 3px solid black;
+  outline: 4px solid #999;
+}
+footer {
+  background-color: #444;
+  color: #eee;
+  text-align: center;
+  padding: 10px 0;
+  justify-self: flex-end;
+}
