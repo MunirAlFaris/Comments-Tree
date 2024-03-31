@@ -7,9 +7,6 @@
 body {
   background-color: #999;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 header {
   text-align: center;
@@ -23,6 +20,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 90%;
+  padding: 50px 0 75px;
 }
 .tree {
   display: none;
@@ -94,11 +92,14 @@ ul details[open] > summary::before {
   content: "-";
   line-height: 1.8em;
 }
-.posts-container {
+.posts-container,.threads-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
   gap: 20px;
   color: black;
+}
+.threads-container {
+  grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
 }
 .posts-container .post {
   background-color: #eee;
@@ -163,4 +164,41 @@ footer {
   text-align: center;
   padding: 10px 0;
   justify-self: flex-end;
+}
+.thread {
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid black;
+  overflow: hidden;
+}
+.thread p {
+  font-weight: bold;
+  font-size: 22px;
+  border-bottom: 2px solid black;
+  width: 100%;
+  padding: 15px 0 10px;
+}
+.thread a {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #555;
+  border-bottom: 2px solid black;
+  transition: 0.3s;
+}
+.thread a:hover {
+  color: black;
+}
+.thread a:first-of-type {
+  padding-top: 15px;
+}
+.thread a:last-of-type {
+  padding-bottom: 15px;
+  border: none;
 }
